@@ -1,0 +1,1052 @@
+//<МИКСИНЫ>===============================================================================================
+@mixin anim($time,$delay){-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time, $delay) {-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin rotate($deg){-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
+@mixin scale($num){-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
+@mixin skew($num){-webkit-transform: skewX($num);-moz-transform: skewX($num);-ms-transform: skewX($num);-o-transform: skewX($num);transform: skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items: stretch;justify-content: center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
+@mixin flexbox() {display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;font-size:0;}
+@mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic');
+	@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+	@font-face {
+	font-family: 'Algerian';
+	src: url('../fonts/ALGER.TTF');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MuseoSansCyrl-Italic';
+	src: url('../fonts/MuseoSansCyrl-100Italic.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MuseoSansCyrl';
+	src: url('../fonts/MuseoSansCyrl-300.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('../fonts/MyriadPro-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+//</Подключаем шрифты>=======================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily:"MuseoSansCyrl";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>==============================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth:320px;
+$mw:1170;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+
+$btn-color:#991717;
+$btn-hover:#de2121;
+//</ПЕРЕМЕННЫЕ>==============================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+*{padding: 0px;margin: 0px;border: 0px;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+aside,nav,footer,header,section{display: block;}
+html,body{height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
+	&.lock{overflow: hidden;
+		@media (max-width:$md3+px){
+			width: 100%;
+			position: fixed;
+			overflow: hidden;
+		}
+	}
+}
+input,button,textarea{font-family: $fontfamily;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper{width: 100%;min-height: 100%;overflow: hidden;
+	&.loaded{}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container{max-width:$mw+px;margin: 0 auto;width: 100%; padding: 0 10px;
+	// // @media (max-width:$md1+px){max-width: 970px;}
+	// @media (max-width:$md2+px){max-width: 750px;}
+	// @media (max-width:$md3+px){max-width: none;padding:0 10px;}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "header.scss";
+@import "ui.scss";
+@import "slick.scss";
+@import "slick-theme.scss";
+@import "responsive.scss";
+@import "burger.scss";
+@import "popup.scss";
+@import "footer.scss";
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+/*OFFER
+====================================*/
+
+
+
+.offer {
+	padding: 100px 0 75px 0;
+	min-height:715px;
+	width: 100%;
+	background: url(../img/offer/offer-bg.jpg) center /cover;
+	 background-repeat: no-repeat;
+	 
+
+}
+
+
+.offer {}
+.container {}
+.offer__text {
+	text-align: center;
+	line-height: 73px;
+}
+.offer-title {
+	color: #fbe8dc;
+	font-family: Algerian;
+	font-size: 105px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 6.3px;
+	line-height: 1;
+	@media (max-width: 570px) {
+		font-size: 74px;
+	}
+	@media (max-width: 388px) {
+		font-size: 60px;
+	}
+
+}
+.offer-subtitle {
+	color: #fbe8dc;
+	font-family: "MuseoSansCyrl";
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	margin-bottom: 38px;
+	line-height: 1.5;
+	@media (max-width: 388px) {
+		font-size: 25px;
+	}
+}
+.offer_columns {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@media (max-width:993px) {
+		justify-content: center;
+	}
+	@media (max-width:767px) {
+		justify-content: space-between;
+	}
+
+
+}
+.offer__column {
+	flex:0 1 25%;
+	@media (max-width:993px) {
+		flex: 0 1 35%;
+	}
+	@media (max-width:767px) {
+		flex: 0 1 50%;
+	}
+	@media (max-width: 505px) {
+		flex: 0 1 100%;
+	}
+
+}
+.offer__item {
+	background-image:url('../img/offer/offer-img-bg.png');
+	background-position:center ;
+	background-repeat: no-repeat;
+	position: relative;
+	min-height:220px;
+	min-width: 220px;
+	margin-top: 25px;
+
+	/*=====   ROUND TEXT  =====*/
+	& div {
+		width: 100%;
+		  height: 100%;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+	}
+
+
+	.offer__item-text {
+		transform: rotate(-87deg);
+		z-index: 100;
+	}
+
+
+	.offer__item-text-bottom {
+		z-index: 100;
+		transform: translateY(109px);
+
+
+		span {
+			padding-top: 82px;
+  			transform-origin: top center;
+		}
+	}
+
+
+	 span {
+		position: absolute;
+		  width: 12px;
+		  height: 105px;
+		  color: #fff;
+		  text-align: center;
+		  top: 10px;
+		  left: 48%;
+		  margin-left: -3px;
+		  transform-origin: bottom center;
+		  z-index: 100;
+		  font: bold 14px Courier, MonoSpace;
+	}
+}
+ @for $i from 1 through 30 {
+   .offer__item-text .char#{$i}{transform:(rotate(($i * 6)+deg))}
+ }
+
+ .offer__item-text-bottom .char1 {transform: rotate(22deg);}
+ .offer__item-text-bottom .char2 {transform: rotate(16deg);}
+ .offer__item-text-bottom .char3 {transform: rotate(10deg);}
+ .offer__item-text-bottom .char4 {transform: rotate(4deg);}
+ .offer__item-text-bottom .char5 {transform: rotate(-2deg);}
+ .offer__item-text-bottom .char6 {transform: rotate(-8deg);}
+ .offer__item-text-bottom .char7 {transform: rotate(-14deg);}
+ .offer__item-text-bottom .char8 {transform: rotate(-20deg);}
+ .offer__item-text-bottom .char9 {transform: rotate(-26deg);}
+ .offer__item-text-bottom .char10 {transform: rotate(-32deg);}
+ .offer__item-text-bottom .char11 {transform: rotate(-38deg);}
+ .offer__item-text-bottom .char12 {transform: rotate(-44deg);}
+ .offer__item-text-bottom .char13 {transform: rotate(-50deg);}
+ .offer__item-text-bottom .char14{transform: rotate(-56deg);}
+ .offer__item-text-bottom .char15{transform: rotate(-62deg);}
+ .offer__item-text-bottom .char16{transform: rotate(-68deg);}
+ .offer__item-text-bottom .char17{transform: rotate(-74deg);}
+ .offer__item-text-bottom .char18{transform: rotate(-80deg);}
+ .offer__item-text-bottom .char19{transform: rotate(-86deg);}
+ .offer__item-text-bottom .char20{transform: rotate(-92deg);}
+ .offer__item-text-bottom .char21 {transform: rotate(-98deg);}
+ .offer__item-text-bottom .char22 {transform: rotate(-104deg);}
+
+
+/*===== END ROUND TEXT=====*/
+
+
+.offer__item__img {
+	
+	position: absolute;
+	top: 51%;
+    left: 51%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+	z-index: 2;
+
+}
+.offer__buttons { 
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
+	margin-top: 60px;
+	@media(max-width: 667px) {
+		flex-direction:column;
+		justify-content: center;
+		align-items:center;
+		
+	}
+
+}
+.offer__btn {
+	min-width: 295px;
+	@media(max-width: 667px) {
+		margin-bottom: 20px;
+	}
+}
+
+.offer__btn-2 {
+		display: inline-block;
+		padding: 25px 40px;
+		background-color:rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+		border: 2px solid #fbe8dc;
+		color:#fbe8dc;
+		font-family: "Roboto Slab";
+		font-weight: 700;
+		letter-spacing: 1.08px;
+		font-size:18px;
+		transition: all 0.5s ease;
+		margin-left: 36px;
+		margin-top: 0px;
+		min-width: 308px;
+		@media(max-width: 667px) {
+		margin-left: 0px;
+	}
+
+		
+		&:hover {
+		background-color:$btn-hover;
+		transition: all 0.5s ease;
+		}
+}
+
+.button {}
+
+
+/*===================================
+END OFFER*/
+
+/*FEATURES
+==================================================*/
+
+.features {
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	@media (max-width: 993px) {
+		flex-direction: column;
+	}
+	
+
+}
+.features__column {
+	flex: 0 1 50%;
+}
+.features__img {
+	@media (max-width: 993px) {
+		min-height: 500px;
+	}
+}
+.features__text {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	padding-right: 50px;
+	padding-left: 20%;
+	height: 100%;
+	background: url(../img/features/features-bg.jpg) center /cover;
+	 background-repeat: no-repeat;
+	 box-shadow: inset -9px -8px 17px 0px rgba(0,0,0,0.45);
+	 @media (max-width: 993px) {
+	 	padding: 30px 10% 5% 10%;
+	 }
+}
+
+
+.features__title {
+	color: #212121;
+	font-family: "Roboto Slab";
+	font-size: 42px;
+	font-weight: 700;
+	letter-spacing: 0.84px;
+	@media(max-width: 997px) {
+		text-align: center;
+	}
+
+}
+.features__subtitle {
+	padding: 15px 0 75px 0;
+	color: #212121;
+	font-size: 42px;
+	font-family: Algerian;
+	font-weight: 400;
+	letter-spacing: 0.84px;
+	position: relative;
+	@media(max-width: 997px) {
+		text-align: center;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 515px;
+		height: 35px;
+		top: 70px;
+		left: -20px;
+		background-image: url(../img/features/02.png);
+		@media (max-width: 1234px) {
+			display: none;
+		}
+	}
+	@media (max-width: 993px) {
+			padding-bottom: 30px;
+		}
+
+}
+
+.features__content {
+	color: #212121;
+	font-family: "MuseoSansCyrl";
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23px;
+	p {
+		padding-bottom:35px;
+
+	}
+
+}
+.features__img {
+	height: 100%;
+
+}
+
+.features__button a{
+	@media (max-width: 365px) {
+		font-size:15px;
+	}
+}
+
+/* END FEATURES
+==================================================*/
+//===================================================================================================================
+
+/*COOKING
+===============================================*/
+.cooking {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	@media (max-width: 993px) {
+			flex-direction: column-reverse;
+		}
+
+}
+.cooking__column {
+	flex: 0 0 50%;
+}
+.cooking__img {
+	height: 100%;
+	width: 100%;
+	@media (max-width: 993px) {
+	 	min-height: 500px;
+	 }
+}
+.cooking__text {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	padding-left: 50px;
+	padding-right: 10%;
+	height: 100%;
+	background: url(../img/cooking/cooking-bg.png) center /cover;
+	 background-repeat: no-repeat;
+	 @media (max-width: 993px) {
+	 	padding: 30px 10% 5% 10%;
+	 }
+	  @media (max-width: 325px) {
+	 	padding: 30px 5% 5% 5%;
+	 }
+
+
+}
+.cooking__title {
+	color: #d2d9ee;
+	font-family: "Roboto Slab";
+	font-size: 42px;
+	font-weight: 700;
+	letter-spacing: 0.84px; 
+	@media(max-width: 660px){
+		text-align: center;
+	}
+	@media(max-width: 400px){
+		font-size: 36px;
+	}
+
+	
+}
+.cooking__subtitle {
+	padding: 15px 0 75px 0;
+	color: #d2d9ee;
+	font-size: 42px;
+	font-family: Algerian;
+	font-weight: 400;
+	letter-spacing: 0.84px;
+	position: relative;
+		@media(max-width: 662px){
+		text-align: center;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 515px;
+		height: 35px;
+		top: 70px;
+		left: -20px;
+		background-image: url(../img/features/02.png);
+		@media (max-width: 1234px) {
+			display: none;
+		}
+	}
+	@media (max-width: 993px) {
+			padding-bottom: 30px;
+		}
+}
+.cooking__content {
+	color: #d2d9ee;
+	font-family: "MuseoSansCyrl";
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23px;
+	p {
+		padding-bottom:35px;
+
+	};
+
+	
+	
+
+}
+
+
+.cooking__button a{
+		@media (max-width: 366px) {
+		font-size:15px;
+	}
+
+	}
+/*==============================================
+END COOKING*/
+
+/*MENU
+=============================================*/
+.menu {  }
+.menu__title-wrap{
+	border: 3px solid #131d1d;
+	padding: 40px 0 40px 0;
+	margin-bottom: 70px;
+	text-align: center;
+	color: #c7c7c7;
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: 1.12px;
+	text-transform: uppercase;
+	box-shadow: 0px 26px 56px -11px rgba(0,0,0,0.58);
+	background: url(../img/menu/menu-bg.jpg) center /cover no-repeat;
+	.menu__title {
+	font-family: "Roboto Slab";
+	
+	font-weight: 700;
+
+	}
+	.menu__subtitle {
+	font-family: Algerian;
+	font-weight: 400;
+	}
+	
+}
+
+.menu__wrap {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+	margin: 0 -15px;
+	@media (max-width: 1180px) {
+		justify-content: center;
+	}
+
+
+}
+.menu__column {
+	flex:0 1 33.3333%;
+	min-width: 370px;
+	padding: 0 15px;
+	min-width: 320px;
+	@media (max-width: 1180px) {
+		flex:0 1 34%;
+	}
+
+}
+.menu__item {
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.menu__item-bottom {
+	position: relative;
+	padding: 0 20px 30px 20px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	margin-top: -10px;
+	background: url(../img/menu/item-bg.png) top  repeat-x;
+	 background-size:  120% 100%;
+}
+.menu__item-img {
+		position: relative;
+		border-radius:5px;
+		min-height: 370px;
+
+	
+}
+
+	.image-shadow {
+		position: absolute;
+		top: -10px;left: -10px;
+		border-radius: 5px;
+		min-width: 320px;
+		max-width: 390px;
+		height:370px;
+		transform:rotate(-2deg); 
+		z-index:-1;
+		background-color:rgba(0,0,0,0.1);
+}
+.menu__item-title {
+
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+.menu__item-text {
+	color: #212121;
+	font-family: "Roboto Slab";
+	font-size: 27px;
+	font-weight: 700;
+	margin-right: 27px;
+	padding-bottom: 15px;
+	letter-spacing: 0.54px;
+}
+
+.menu__item-price {
+	position: relative;
+	color: #f2f2f2;
+	font-family: "Roboto Slab";
+	font-size: 20px;
+	letter-spacing: 0.4px;
+	width: 90px;
+	height: 35px;
+	background: url(../img/menu/price-bg.png) center /cover no-repeat;
+
+	.price-text {
+		position: absolute;
+		top: 7px;
+		left: 23px;
+
+		span {
+			font-size: 17px;
+		}
+		
+	}
+	
+}
+
+.menu__item-btn {
+		display: inline-block;
+		padding: 15px 23px 15px 16px;
+		background-color:$btn-color;
+		border-radius: 5px;
+		color:#fff;
+		font-family: "Roboto Slab";
+		font-weight: 700;
+		letter-spacing: 0.3px;
+		font-size:15px;
+		transition: all 0.5s ease;
+
+		span {
+			margin-left: 5px;
+			margin-right: 5px;
+			font-family: "Font Awesome 5 Free";
+		}
+		&:hover {
+		background-color:$btn-hover;
+		transition: all 0.5s ease;
+		}
+
+}
+
+
+
+.menu__item-proportion {
+	padding-bottom: 35px;
+	color: #616161;
+	font-family: "Roboto Slab";
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 2.52px;
+}
+.menu__item-composition {
+	position: relative;
+	border-top: 2px solid #d2d2e3;
+	border-bottom: 2px solid #d2d2e3;
+	padding: 25px 0 25px 0;
+	margin-bottom: 18px;
+	color: #2a2c33;
+	font-family: "MuseoSansCyrl";
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+
+
+	li {
+		position: relative;
+		padding-left:10px;
+
+		&::before {
+			content:'';
+			position:absolute;
+			top: 0px;
+			left: 0px;
+			font-family:'Font Awesome 5 Free';
+			font-weight: 900;
+		
+		}
+	}
+
+	span {
+		color: #3c4c84;
+		font-family: "MuseoSansCyrl-Italic";
+		letter-spacing: 0.3px;
+	}
+
+
+}
+
+/*================================================
+END MENU*/
+
+/*DELYVERY
+ ===================================================*/
+
+ .delivery {
+ 	padding: 100px 15px 100px 15px;
+ 	background: url(../img/delivery/delivery-bg.jpg) center /cover no-repeat;
+ }
+.container {}
+.delivery__title {
+	position: relative;
+		color: #d2d9ee;
+		font-family: "Roboto Slab";
+		font-size: 42px;
+		font-weight: 700;
+		letter-spacing: 0.84px;
+		padding-bottom: 95px;
+		@media(max-width: 500px) {
+				text-align: center;
+			}
+		&::after {
+			content:'';
+			position: absolute;
+			top: 60px;
+			left:-35px;
+			background-image: url(../img/delivery/01.png);
+			height: 36px;
+			width: 512px;
+			@media(max-width: 500px) {
+				display: none;
+			}
+			
+		}
+
+
+}
+.delivery__column-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	@media(max-width: 660px) {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+
+}
+.delivery__column {
+	flex: 0 1 33.333%;
+	min-width: 323.33px;
+	padding: 0 15px;
+	margin-bottom: 20px;
+}
+.delyvery__item {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+.delivery__item-img {
+	margin-right: 20px;
+	.delivery__item-img-border {
+		position: relative;
+		width: 102px;
+		height: 102px;
+		border: 1px dashed #df914f;
+		border-radius:50%;
+	}
+.delivery__item-img-circle {
+	position:absolute;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	width: 75px;
+	height: 75px;
+	background-color: #df914f;
+	border-radius: 50%;
+}
+.delivery__item-img-icon {
+	position:absolute;
+	color: #1b1d21;
+	font-family: "Font Awesome 5 Free";
+	font-size: 41px;
+	font-weight: 900;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+}
+.delivery__item-text {
+
+}
+.delivery__item-title {
+	color: #d2d9ee;
+	font-family: "Roboto Slab";
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0.4px;
+	padding-bottom: 15px;
+
+}
+.delyvery__item-content {
+
+color: #d2d9ee;
+font-family: "MuseoSansCyrl";
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0.32px;
+
+}
+
+/*===================================================
+  END DELIVERY*/
+
+  /*REVIEW
+  ==================================================*/
+.reviews {
+	padding: 80px 0 80px 0;
+	background: url(../img/reviews/review-bg.jpg) center  /cover no-repeat;
+}
+.container {}
+.reviews__title {
+	position: relative;
+	color: #212121;
+	font-family: "Roboto Slab";
+	font-size: 42px;
+	font-weight: 700;
+	letter-spacing: 0.84px;
+	padding-bottom: 82px;
+	@media (max-width: 649px) {
+				text-align: center;
+			}
+
+	&::after {
+		   content:'';
+			position: absolute;
+			top: 60px;
+			left:-35px;
+			background-image: url(../img/delivery/01.png);
+			height: 36px;
+			width: 512px;
+			@media (max-width: 649px) {
+				display:none;
+			}
+
+
+	}
+}
+.reviews__slider-wrap {
+	margin: 0 auto;
+
+}
+.reviews__slider {
+	position: relative;
+
+}
+.reviews__slider-item {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	@media (max-width: 1354px) {
+		justify-content: center;
+	}
+	@media (max-width: 926px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+
+}
+.reviews__slider-img {
+	margin-right: 33px;
+	margin-bottom: 10px;
+}
+.slider__item-text {
+	flex:0 1 50%;
+	@media (max-width: 926px) {
+		width:60%;
+	}
+	@media (max-width: 712px) {
+		width:60%;
+	}
+}
+.slider__item-title {
+	display: flex;
+	color: #212121;
+	font-family: "Roboto Slab";
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 21px;
+	letter-spacing: 0.48px;
+	padding-bottom: 26px;
+
+	.slider__item-title-name {
+		padding-right: 20px;
+	}
+	.slider__item-title-vk {
+		display:block;
+		position: relative;
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.67);
+		background-color: #357096;
+
+		& span{
+		position: absolute;
+		top: 50%;
+	    left: 50%;
+	    margin-right: -50%;
+	    transform: translate(-50%, -50%);
+		color: #ffffff;
+		font-family: "Font Awesome 5 Brands";
+		font-size: 14px;
+		font-weight: 900;
+		
+
+	}
+	}
+
+	
+}
+.slider__item-content {
+
+	color: #212121;
+	font-family: "MuseoSansCyrl-Italic";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: 0.96px;
+}
+.slider__dotted {
+	position: absolute;
+	display: flex;
+	bottom: -0px;
+    left: 24%;
+    margin-right: -25%;
+    transform: translate(-25%, -25%);
+    @media (max-width: 1354px) {
+		left: 50%;
+    	margin-right: -50%;
+    	transform: translate(-50%, -50%);
+	}
+
+    .slider__dotted-item{
+    	margin-right: 5px;
+    	padding: 7px;
+    	border-radius: 50%;
+    }
+
+    .active-dotted {
+    	background-color: #991717;
+    }
+
+
+}
+.arrow__left img {
+   	position: absolute; 
+   	left: -7%;              
+   	top: 50%;                         
+   	transform: translate(0, -50%);
+   	cursor: pointer;
+   	@media (max-width: 1354px) {
+		left: 7%;
+	}
+} 
+
+
+.arrow__right img{
+   	position: absolute; 
+   	right: 20%;              
+   	top: 50%;                         
+   	transform: translate(0, -50%);
+   	cursor: pointer;
+   	@media (max-width: 1354px) {
+		right: 5%;
+	}
+}
+
+  /*END REVIEW
+  ==================================================*/
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+/*********************BUTTON TO TOP************************/
+
+#toTop {
+width:70px;
+background:#991717;
+text-align:center;
+padding:5px;
+position:fixed;
+bottom:10px; /* отступ кнопки от нижнего края страницы*/
+right:10px;
+cursor:pointer;
+display:none;
+color:#fff;
+font-family: FontAwesome, serif;
+font-size: 30px;
+border-radius: 5px;
+}
+
+
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>=================================================================================================== 

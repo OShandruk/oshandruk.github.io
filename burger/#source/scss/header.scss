@@ -1,0 +1,420 @@
+
+/*=======================HEADER==============*/
+header{
+	position:relative;
+	z-index:999;
+	padding: 10px 0 0px 0;
+	background-image:url('../img/header/header-bg.png');
+	background-position:center ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 115px;
+  	width: 100%;
+  	transition: all 0.5s ease;
+  	
+
+  	&.fix__header {
+  		position: fixed;
+  		top: 0;
+  		left: 0;
+		min-height: 75px;
+		z-index: 999;
+		transition: all 0.5s ease;
+	}
+
+}
+.logo-img-small {
+		width:55px;
+		height: 55px; 
+		transition: all 0.5s ease;
+}
+
+
+ .header__wrap {
+ 	height: 100%;
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+}
+	 .order {
+	 	
+	 	flex: 0 1 30%;
+	 	transition: all 0.5s ease;
+	 	height:inherit;
+	 	display: flex;
+	 	justify-content: space-between;
+	 	align-items: center;
+	 	cursor: pointer;
+
+	 	
+	 	
+	 }
+	.header__menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		transition: all 0.5s ease;
+		& a:last-child {
+			margin-right: 0px;
+		}
+
+
+		.header__link { 
+			display: inline-block;
+			margin-right: 10px;
+			padding: 10px 15px;
+			color: #322419;
+			font-family: "Roboto Slab";
+			font-size: 13px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.78px;
+			transition: all 0.5s ease;
+
+			&:hover {
+				color: #fff;
+				background-color: rgba(76, 45, 17, 0.7);
+				border-radius: 5px;
+				transition: all 0.5s ease;
+
+			 }
+		 
+		}
+}
+
+.sum {
+	
+	color: #ffeee0;
+	font-family: "Roboto Slab";
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.5;
+	letter-spacing: 0.72px;
+	min-width: 64.16px;
+	margin-left: 10px;
+
+	p {
+		font-size: 17px;
+	}
+	span {
+		font-family:"Font Awesome 5 Free";
+		margin-left: 5px;
+		font-size: 17px;
+	}
+}
+
+
+
+ .order__wrap{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+
+ }
+
+.carets {
+	position: relative;
+	display:block;
+	width: 58px;
+	height: 58px;
+	background-color: #ffdaba;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1;
+
+	&:hover .carets_sum-orders{
+		background-color:$btn-hover;
+		transition: all 0.5s ease;
+
+	}
+
+	.carets-img {
+		position: absolute;
+		top: 13px;
+		left: 11px;
+	}
+
+	.carets_sum-orders {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		top: 0;
+		right: 0;
+		border-radius: 50%;
+		background-color:$btn-color;
+		z-index: 2;
+		transition: all 0.5s ease;
+
+
+		& span {
+			position:absolute;
+			top: 4px;
+			left: 5px;
+			color: #faeae0;
+			font-family: "Roboto Slab";
+			font-size: 9px;
+			font-weight: 400;
+			z-index: 1;
+
+
+			
+		}
+	}
+
+
+
+}
+
+.sum {
+	position: relative;
+	z-index: 1;
+}
+.order__btn {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	left: 7px;
+	z-index: 1;
+
+
+	.btn {
+		
+		&:hover ~.order__btn-img{
+			transform: scaleX(-1);
+			right: -7px;
+			transition: all 0.5s ease;
+		}
+
+
+	}
+	.order__btn-img {
+			position:absolute;
+			top: -3px;
+			right: 0px;
+			z-index: -1;
+			transition: all 0.5s ease;
+		}
+
+
+}
+
+.smoll-button {
+		display: inline-block;
+		min-width:176.81px; 
+		padding: 14px 21px 14px 18px;
+		background-color:$btn-color;
+		border-radius: 5px;
+		color:#fff;
+		font-family: "Roboto Slab";
+		font-weight: 700;
+		letter-spacing: 0.78px;
+		font-size:13px;
+		transition: all 0.5s ease;
+
+		span {
+			margin-left: 5px;
+			font-family: "Font Awesome 5 Free"
+		}
+		&:hover {
+		background-color:$btn-hover;
+		transition: all 0.5s ease;
+		}
+}
+
+
+.big-button {
+		display: inline-block;
+		padding: 25px 40px;
+		background-color:$btn-color;
+		border-radius: 5px;
+		color:#fff;
+		font-family: "Roboto Slab";
+		font-weight: 700;
+		letter-spacing: 1.08px;
+		font-size:18px;
+		transition: all 0.5s ease;
+
+		span {
+			margin-left: 5px;
+			margin-right: 5px;
+			font-family: "Font Awesome 5 Free";
+		}
+		&:hover {
+		background-color:$btn-hover;
+		transition: all 0.5s ease;
+		}
+
+}
+
+
+/* ========================================
+END HEADER*/
+//====================================================================================================
+
+/*============ORDER HOVER================*/
+.order__hover {
+	display: none;
+	position:absolute;
+	min-height: 350px;
+	min-width: 370px;
+	top: 0;
+	right: 5%;
+	background-color: rgba(76, 45, 17, 0.7);
+	padding:115px 0px 25px 0px;
+	z-index: 0;
+	color:#e3cbb8;
+	font-family: "Roboto Slab";
+	font-size:17px;
+
+	@media(max-width:1287px) {
+		right: 5px;
+
+	}
+	@media(max-width:1182px) {
+		padding-top:75px;
+
+	}
+	@media(max-width:420px) {
+		right: 0px;
+	}
+		
+	
+	
+
+}
+.order__hover-title {
+	padding: 25px 0px 20px 30px;
+	
+
+
+}
+.order__hover__row {
+	position: relative;
+
+	&:first-child,  {
+
+		border-top: 2px dashed #f2ceaf;
+	}
+	&:last-child {
+		border-bottom: 2px dashed #f2ceaf;
+	}
+	
+	
+
+}
+
+.order__hover-item {
+	display: flex;
+	padding: 19px 20px 8px 30px;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.5s ease;
+		&:hover {
+			background-color: rgba(119, 73, 36, 0.8);
+			transition: all 0.5s ease;
+		}
+
+	
+}
+.order__hover-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	border:2px solid #927748;
+	border-radius: 50%;
+	background: url(../img/header/order-burger-hover.png)  center center no-repeat;
+	background-color:#fad7c0;
+		img {
+			border-radius: 50%;
+			height: 46px;
+			width: 46px;
+		}
+		
+}
+.order__hover-name {
+	color: #f4e0d4;
+}
+.order__hover-price {
+	display: flex;
+	justify-content: center;
+	color: #fff;
+	font-size: 12px;
+	align-items: center;
+	background: url(../img/header/hover-price-bg.png) no-repeat center /cover ;
+	height: 21px;
+	width:54px;
+		span {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 700;
+	}
+}
+.order__hover-amount {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.order__hover-amount-number {
+	border: 2px solid #f2ceaf;
+	padding: 7px;
+	margin-right: 7px;
+	font-size: 13px;
+}
+
+.order__hover-amount-arrows {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.order__hover-amount-top {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 700;
+		cursor: pointer;
+}
+.order__hover-amount-buttom {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 700;
+		cursor: pointer;
+
+}
+
+.order__hover-sum { 
+	padding: 25px 30px 0px 35px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+ }
+.order__hover-sum-text {
+	margin-right: 13px;
+}
+.order__hover-sum-amaunt {
+	display: flex;
+	justify-content: center;
+	color: #fff;
+	font-size: 19px;
+	align-items: center;
+	background: url(../img/header/hover-price-bg.png) center center /cover no-repeat;
+	height: 30px;
+	min-width:83px;
+	margin-right: 5px;
+		span {
+			margin-left: 5px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 700;
+	}
+}
+.order__hover-sum-btn {}
+
+
+
+
+/*==========END ORDER HOVER===============*/
+
+
+
