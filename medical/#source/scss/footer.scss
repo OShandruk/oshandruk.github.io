@@ -1,0 +1,87 @@
+footer{
+	padding: 129px 0px 121px 0px;
+	background-color:#072135;
+
+	@media(max-width: 992px) {
+		padding: 60px 0px 10px 0px;
+	}
+	a {
+		transition: ease 0.5s all;
+		&:hover {
+			text-decoration: underline;
+			transition: ease 0.5s all;
+		}
+		
+	}
+	
+	.footer__wrap {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		@media(max-width: 360px) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		}
+
+		
+	}
+	.footer__column {
+		padding: 0 15px;
+		@media(max-width: 768px) {
+			margin-bottom: 30px;
+		} 
+	}
+	.footer__medical {
+		flex: 0 1 45%;
+
+		@media(max-width: 768px) {
+			flex: 0 1 100%;
+			
+		} 
+	}
+	.foooter__column__title {
+
+		color: #ffffff;
+		font-family: Roboto;
+		font-size: 18px;
+		margin-bottom: 44px;
+
+		@media(max-width: 360px) {
+		margin-bottom: 20px;
+		}
+	}
+	.foooter__column__text {
+
+			color: #ffffff;
+			font-family: Roboto;
+			font-size: 14px;
+			line-height: 30px;
+			opacity: 0.7;
+	}
+	.footer__list {
+		a {
+			color: #fff;
+			opacity: 0.7;
+		}
+		li{
+			margin-bottom: 20px;
+		}
+	}
+	
+	.footer__contact {
+		display: flex;
+		flex-direction: column;
+		margin-top: 40px;
+		a {
+			color: #fff;
+			opacity: 0.7;
+			margin-bottom: 15px;
+		}
+	}
+}
+//====================================================================================================
+
+//====================================================================================================
+
