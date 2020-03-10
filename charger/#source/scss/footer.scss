@@ -1,0 +1,44 @@
+footer{
+	padding: 48px 0px 48px 0px;
+}
+.footer__wrap {
+	padding: 0 10px;
+	max-width: 950px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@media(max-width: 540px) {
+		flex-direction: column;
+	}
+
+}
+.footer__logo-link {
+	display: flex;
+	align-items: center;
+
+	.footer__logo-img {
+	margin-right: 18px;
+}
+
+}
+.footer__column {
+	flex: 0 1 50%;
+
+}
+.footer__spot-link {
+	display: block;
+	text-align: right;
+	color: #909090;
+	font-family: 'MyriadProRegular';
+	font-size: 16px;
+	@media(max-width: 540px) {
+		margin-top: 30px;
+	}
+	
+}
+
+//====================================================================================================
+
+//====================================================================================================
+

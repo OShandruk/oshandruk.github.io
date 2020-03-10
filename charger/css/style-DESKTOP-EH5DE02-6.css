@@ -1,0 +1,158 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: url("../fonts/HelveticaNeue-Light.eot");
+  src: local("☺"), url("../fonts/HelveticaNeue-Light.woff") format("woff"), url("../fonts/HelveticaNeue-Light.ttf") format("truetype"), url("../fonts/HelveticaNeue-Light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HelveticaNeue-Regular';
+  src: url("../fonts/HelveticaNeue-Regular.eot");
+  src: local("☺"), url("../fonts/HelveticaNeue-Regular.woff") format("woff"), url("../fonts/HelveticaNeue-Regular.ttf") format("truetype"), url("../fonts/HelveticaNeue-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HelveticaNeue-Thin';
+  src: url("../fonts/HelveticaNeue-Thin.eot");
+  src: local("☺"), url("../fonts/HelveticaNeue-Thin.woff") format("woff"), url("../fonts/HelveticaNeue-Thin.ttf") format("truetype"), url("../fonts/HelveticaNeue-Thin.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'LucidaGrande';
+  src: url("../fonts/LucidaGrande.eot");
+  src: local("☺"), url("../fonts/LucidaGrande.woff") format("woff"), url("../fonts/LucidaGrande.ttf") format("truetype"), url("../fonts/LucidaGrande.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url("../fonts/MyriadProRegular.eot");
+  src: local("☺"), url("../fonts/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular.ttf") format("truetype"), url("../fonts/MyriadProRegular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'MyriadProSemibold';
+  src: url("../fonts/MyriadProSemibold.eot");
+  src: local("☺"), url("../fonts/MyriadProSemibold.woff") format("woff"), url("../fonts/MyriadProSemibold.ttf") format("truetype"), url("../fonts/MyriadProSemibold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'SFCompactRoundedSemibold';
+  src: url("../fonts/SFCompactRoundedSemibold.eot");
+  src: local("☺"), url("../fonts/SFCompactRoundedSemibold.woff") format("woff"), url("../fonts/SFCompactRoundedSemibold.ttf") format("truetype"), url("../fonts/SFCompactRoundedSemibold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+aside, nav, footer, header, section {
+  display: block; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  color: #000; }
+
+body {
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+  body.lock {
+    overflow: hidden; }
+
+input, button, textarea {
+  font-family: ""; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit; }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+
+header {
+  padding: 60px 0px 80px 0px;
+  background-image: url(../img/header/header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  header .header__wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  header .header__text {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    margin-right: 50px; }
+  header .logo {
+    color: #ffffff;
+    font-family: 'SFCompactRoundedSemibold';
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 22.63px;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin-bottom: 100px; }
+  header .header__mobile {
+    position: relative; }
+  header .header__mobile-phone1 {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  header .header__mobile-phone2 {
+    position: absolute;
+    top: 30px;
+    left: 150px; }
