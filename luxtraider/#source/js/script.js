@@ -284,11 +284,8 @@ function tip(){
 // ************SLICK SLIDER**************************************
 
 $('.offer__slider').slick({
-  infinite: true,
   speed:1000,
   slidesToShow: 1,
-  autoplay: true,
-  autoplaySpeed: 1000,
   prevArrow:document.querySelector('.arrow__left'),
   nextArrow:document.querySelector('.arrow__right'),
 });
