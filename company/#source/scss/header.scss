@@ -1,0 +1,256 @@
+//====================================================================================================
+header{
+	
+}
+//====================================================================================================
+/*TOP HEADER
+=========================================================*/
+.header__top {
+	min-height:50px;
+	background-color: #4a657d;
+	display: flex;
+	align-items: center;
+}
+.header__top__wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.header__top__column {
+	display: flex;
+	align-items: center;
+}
+.header__phone {
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+	position: relative;
+	padding: 19px 17px 19px 5px;
+	white-space: nowrap;
+	
+
+	transition: all 0.5s ease;
+	&:hover {
+		background-color:#1f87e4;
+		transition: all 0.5s ease;
+	}
+	img  {
+		margin-right: 15px;
+	}
+	&:after {
+		content:'';
+		position: absolute;
+		top: 19;
+		right: 0;
+		width: 1px;
+		height: 17px;
+		background-color: #8093a4;
+	}
+}
+.header__tel {
+
+}
+.header__mail {
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+	transition: all 0.5s ease;
+	padding: 19px 15px 19px 15px;
+	img {
+		margin-right: 15px;
+	}
+
+	&:hover {
+		background-color:#1f87e4;
+		transition: all 0.5s ease;
+	}
+
+	@media(max-width: 520px) {
+		display: none;
+	}
+}
+.header__social {
+	display: flex;
+	align-items: center;
+	padding-right: 17px;
+	position: relative;
+
+	&:after {
+		content:'';
+		position: absolute;
+		top: 19px;
+		right: 0;
+		width: 1px;
+		height: 17px;
+		background-color: #8093a4;
+	}
+
+	@media(max-width: 992px) {
+		display: none;
+	}
+}
+.header__social__link {
+	padding: 19px 15px 19px 15px;
+	transition: all 0.5s ease; 
+	&:hover {
+		background-color:#1f87e4;
+		transition: all 0.5s ease;
+	}
+	
+}
+.header_support {
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 19px 17px 19px 17px;
+	white-space: nowrap;
+	img {
+		margin-right: 15px;
+	}
+	a {
+		color: #ffffff;
+		font-size: 12px;
+		font-weight: 700;
+	}
+
+	&:hover {
+		background-color:#1f87e4;
+		transition: all 0.5s ease;
+	}
+	@media(max-width: 992px) {
+		display: none;
+	}
+}
+.header__top-btn {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 19px 37px 19px 37px;
+	transition: all 0.5s ease;
+	white-space: nowrap;
+
+	&:hover {
+		background-color:#1f87e4;
+		transition: all 0.5s ease;
+	}
+
+	@media(max-width: 500px) {
+		padding: 15px 37px 19px 15px;
+	}
+
+}
+
+/*================================================
+END TOP HEADER*/
+
+/* HEADER
+===================================================*/
+.header {
+	min-height: 100px;
+	padding: 10px 0px 10px 0px;
+
+	@media(max-width: 992px) {
+		min-height: 70px;
+	}
+	
+}
+.header__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+
+.header__fix-wrap {
+
+	&.fix__header {
+  		position: fixed;
+  		top: 0;
+  		left: 0;
+		min-height: 30px;
+		width: 100%;
+		margin: 0 auto;
+		z-index: 999;
+		transition: all 0.5s ease;
+		background-color:rgba(0,0,0, 0.8);
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		.header__link {
+			color: #fff;
+		}
+		.header__logo {
+			img {
+			height: 42px;
+			width: 100px;
+			}
+		}
+	}
+}
+.header__logo {
+	img {
+		@media(max-width: 992px) {
+			height: 40px;
+			width: 90px;
+		}
+
+	}
+}
+.header__menu {}
+.menu {
+	display: flex;
+	@media (max-width:992px) {
+		margin-top: 30px;
+	}
+
+	li {
+		
+		&:last-child {
+			margin-right: 0px;
+		}
+
+		@media (max-width:992px) {
+		color: #fff;
+		margin-bottom: 30px;
+	}
+	}
+
+	@media (max-width:992px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+}
+.header__link {
+	color: #4a657d;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 10px 20px 10px 20px;
+	transition: all 0.5s ease;
+
+	&:hover {
+		color: #fff;
+		transition: all 0.5s ease;
+		background-color: #1f87e4;
+	}
+
+	@media (max-width:992px) {
+		color: #fff;
+	}
+}
+.header__avesome {
+	font-family: 'Font Awesome';
+	font-size: 19px;
+}
+.header__burger {
+	display:none;
+}
+/*==================================================
+END HEADER*/

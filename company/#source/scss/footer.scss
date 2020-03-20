@@ -1,0 +1,166 @@
+footer{
+	background-color: #0e151b;
+	color:#fff;
+	padding: 50px 0px 20px 0px;
+}
+.footer__wrap {
+	display: flex;
+	@media(max-width: 767px){
+		flex-direction: column;
+	}
+}
+.footer__column__logo {
+	flex: 0 1 50%;
+	margin-right: 25px;
+}
+.footer__column {
+	margin-bottom: 30px;
+}
+.footer__logo {
+	margin-bottom: 35px;
+}
+.footer__column__text {
+	padding-left: 30px;
+	font-size: 14px;
+	line-height: 1.714;
+	margin-bottom: 45px;
+
+}
+.footer__column__folower {
+	margin-bottom: 20px;
+	span {
+		font-size: 18px;
+	}
+}
+.footer__column__line {
+	height: 2px;
+	width: 100%;
+	background-color: #55585b;
+	margin-bottom: 15px;
+}
+.footer__column__social {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.footer__column__social-title {
+	
+}
+.footer__column__social__link {
+	font-family: "FontAwesome";
+	font-size: 18px;
+	color: #1f87e4;
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: #fff;
+		transition: all 0.3s ease;
+	}
+}
+.footer__form {
+	display: flex;
+	input {
+		height: 41px;
+		width: 100%;
+		padding-left: 20px;
+		&::placeholder {
+			font-size: 15px;
+			color:#cccccc;
+		}
+
+		&[type='text'] {
+
+			font-size: 15px;
+			color:#cccccc;
+		}
+	}
+}
+.footer__btn {
+	padding:12px 40px 12px 40px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #1f87e4;
+  border: 2px solid transparent;
+  transition: all 0.3s	ease;
+  	&:hover {
+  		color:#1f87e4 ;
+  		background-color: #fff;
+  		border-color:#1f87e4 ;
+  	}
+ 
+
+
+}
+.footer__column__title {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+ 
+
+
+}
+.footer__column__gallery {
+	flex: 0 1 30%;
+}
+.footer__item__wrap {}
+.footer__item {
+	display: flex;
+	margin-bottom: 30px;
+}
+.footer__item__img {
+	margin-right: 20px;
+}
+.footer__item__text {
+	margin-top: 10px;
+ 
+
+}
+.footer__item__title {
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.footer__item__date {
+	  font-size: 13px;
+	  color: #1f87e4;
+ 
+}
+.footer__galllery {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	img {
+		display: block;
+		width: 84px;
+		height: 84px;
+	}
+	
+}
+.footer__gallery__text {
+  font-size: 13px;
+  color: #fff;
+}
+
+.footer__bottom__line {
+	height: 1px;
+	width: 100%;
+	background-color:#55585b;
+	margin-bottom: 25px;
+	margin-top: 60px;
+
+
+}
+.footer__copyright {
+	text-align: center;
+	font-size: 15px;
+	color: #f9f4f0;
+	}		
+//====================================================================================================
+
+//====================================================================================================
+
