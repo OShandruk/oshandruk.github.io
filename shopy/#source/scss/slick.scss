@@ -1,0 +1,123 @@
+/* Слайдер */
+.slick-slider{
+    min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки */
+.slick-dots{}
+.slick-dots li{}
+.slick-dots button{}
+
+/* Конкретный слайдер */
+.slider {
+    position: relative;
+    padding: 0px 60px;
+}
+/* Слайдер */
+.slick-slider{
+    min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+
+/* Слайд */
+.slick-slide{
+    text-align: center;
+}
+/* Слайд активный */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки */
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+
+    img {
+        
+        width: 100%;
+        height: 130px;
+        object-fit:cover;
+          border-radius:6px;
+          transition: 0.5s;
+          border: 1px solid #fff;
+          padding:5px;
+          box-shadow: 0.5px 3px 7px rgba(0, 0, 0, 0.18);
+          -moz-box-shadow: 0.5px 3px 7px rgba(0, 0, 0, 0.18);
+          -webkit-box-shadow: 0.5px 3px 7px rgba(0, 0, 0, 0.18);
+          border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .slick-active {
+        transition: 0.5s;
+        background-color: rgba(255, 89, 18, 0.9);
+    }
+}
+.slick-dots li:hover img{
+  -webkit-box-shadow: 0.9px 4.9px 21px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.9px 4.9px 21px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0.9px 4.9px 21px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e2e2e2;
+}
+.slick-dots li{
+    margin-right: 50px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.slick-dots button{}
+
+/* Конкретный слайдер */
+.product__slider {
+    position: relative;
+    padding: 0px 50px;
+}

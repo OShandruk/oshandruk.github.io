@@ -1,0 +1,77 @@
+footer{
+	min-height: 250px;
+	display: flex;
+	align-items: center;
+}
+//====================================================================================================
+.footer__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 -15px;
+	@media(max-width: 767px){
+		flex-direction: column;
+	}
+}
+.footer__column {
+	flex:0 1 auto;
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+.footer__logo {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.footer__copyright {
+	color: #28313b;
+	font-size: 14px;
+	line-height: 30px;
+}
+.footer__nav {
+	column-count: 3;
+	column-gap: 40px;
+	@media(max-width: 767px){
+		column-count: 2;
+	}
+	li {
+		margin-bottom: 25px;
+		
+		position: relative;
+		&:after{
+			content:'';
+			position: absolute;
+			top: 5px;
+			left: -5px;
+			font-family:"Font Awesome";
+			color: #28313b;
+			font-size: 6px;
+		}
+		&:hover:after {
+			color: #ff5912;
+		}
+	}
+
+	 .footer_nav_link{
+		
+		padding-left: 10px;
+		position: relative;
+		color: #28313b;
+		font-size: 14px;
+			&:hover {
+				color: #ff5912;
+			}
+	}
+}
+.footer__pay {}
+.footer__pay-title {
+	text-align: center;
+	color: #ff5912;
+	font-family: 'HarmoniaSansProCyr-SemiBd';
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+.footer__card-wrap {}
+.footer__card {}
+//====================================================================================================
+
