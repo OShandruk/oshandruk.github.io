@@ -1,0 +1,184 @@
+@media screen and (max-width: 865px) {
+  .sermons__column-wrap {
+    justify-content:center;
+
+  } 
+  .donate a {
+  	padding:0;
+  	padding-bottom: 15px;
+  
+  }
+  .donate  {
+  	margin-top: 15px;
+  }
+  
+
+
+  menu>ul>li::after {
+  content: "";
+
+     
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+	.search p{
+		display: none;
+	}
+	.burger-menu {
+		display: block;
+	}
+	.menu {
+		min-height: 50px;
+	}
+	.donate {
+		padding: 0;
+		margin-top: -4px;
+	}
+
+	menu {
+		display:none;
+		position: absolute;
+		top: 60px;
+		left: 0;	
+		background-color: rgba(0, 0, 0, 0.9);
+		width: 100%;
+		z-index: 1;
+	}
+
+	menu>ul {
+		flex-direction:column;
+		padding-left: 15px;
+		padding-bottom: 15px;
+		
+	}
+
+	.wrap-menu {
+		min-height: 70px;
+	}
+
+	.top-header__wrap {
+  min-height: 50px;
+  
+}
+.social {
+ 
+  font-size: 18px;
+  
+}
+}
+
+@media screen and (max-width: 744px) {
+	.blog__column-wrap {
+		justify-content: center;
+	}
+
+
+}
+
+@media screen and (max-width: 671px) {
+	.volonter__item-wrap{
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 628px) {
+	
+	.search {
+		display: none;
+	}
+	.social {
+		flex: 0 0 60%;
+	}
+	.social a {
+		margin-right: 15px;
+	}
+	menu {
+  		flex: 0 0 100%;
+  }
+	.donation {
+		padding-top: 50px;
+	}
+  .donation-wrap {
+  	flex-wrap: wrap;
+  	flex-direction: column-reverse;
+  	justify-content: center;
+
+
+  }
+  .donation__column-left {
+  	text-align: center;
+  	margin-right: 0;
+  }
+
+  .top-header__wrap {
+  	min-height: 65px;
+  }
+	.footer-bottom-wrap {
+		min-height: 100px;
+	}
+  .footer-bottom {
+  	background: none;
+  }
+
+  .footer {
+  	margin-top: 50px;
+  	padding: 50px 0 50px 0;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+	.footer-logo {
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width: 375px) {
+	.top-header__wrap {
+		min-height: 40px;
+	}
+
+	.logo>a>p {
+		font-size: 20px;
+	}
+
+	.social>a {
+		font-size: 20px;
+	}
+	
+	
+	
+
+
+/*SUB MENU
+======================================*/
+
+
+
+/* END SUB MENU
+======================================*/
+
+
+	
+}
+
+@media screen and (max-width: 360px) {
+	.footer-wrap {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.footer-contact {
+		text-align: center;
+	}
+
+	.donation__column-right {
+		padding-left: 15px;
+	}
+
+}
+
+
