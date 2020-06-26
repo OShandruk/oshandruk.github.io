@@ -1,0 +1,70 @@
+
+//====================================================================================================
+footer {
+	padding: 42px 0px 18px 0px;
+	background-color: #202933;
+	color:#fff;
+	& a {
+		color: #fff;
+	}
+}
+.footer_wrap {
+	display: flex;
+	justify-content: space-between;
+	@media(max-width: 568px){
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+}
+.footer__logo {
+	font-family: "News Gothic Condensed BT";
+	font-size: 25px;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding-bottom: 30px;
+}
+.footer__nav {
+
+}
+.footer__menu {
+	@media(max-width:388px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		a {
+			padding-bottom: 10px;
+		}
+
+	}
+	}
+.footer__link {
+	margin-right: 10px;
+}
+.footer__copiright {
+	padding-top: 48px;
+	text-align:center;
+	padding-bottom: 30px;
+}
+.footer__contact {
+	display: flex;
+	flex-direction: column;
+}
+.footer__contact-mail {
+	margin-bottom: 20px;
+}
+
+.footer__contact-tel {
+	margin-bottom: 33px;
+}
+.footer__contact-disinger {
+	opacity: 0.23;
+	color: #ffffff;
+	font-family: Roboto;
+	font-size: 11px;
+	font-weight: 500;
+}
+//====================================================================================================
+

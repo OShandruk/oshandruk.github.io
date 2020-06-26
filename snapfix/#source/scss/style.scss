@@ -1,0 +1,539 @@
+//<МИКСИНЫ>===============================================================================================
+@mixin anim($time,$delay){-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time, $delay) {-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin rotate($deg){-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
+@mixin scale($num){-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
+@mixin skew($num){-webkit-transform: skewX($num);-moz-transform: skewX($num);-ms-transform: skewX($num);-o-transform: skewX($num);transform: skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items: stretch;justify-content: center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
+@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
+@mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Roboto:300,400,500,700&display=swap');
+//<Подключаем шрифты>=======================================================================================
+@font-face {
+	font-family: 'Calibri';
+	src: url('../fonts/Calibri.eot');
+	src: local('☺'), url('../fonts/Calibri.woff') format('woff'), url('../fonts/Calibri.ttf') format('truetype'), url('../fonts/Calibri.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Calibri-Bold';
+	src: url('../fonts/Calibri-Bold.eot');
+	src: local('☺'), url('../fonts/Calibri-Bold.woff') format('woff'), url('../fonts/Calibri-Bold.ttf') format('truetype'), url('../fonts/Calibri-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Calibri-Regular';
+	src: url('../fonts/Calibri-Regular.eot');
+	src: local('☺'), url('../fonts/Calibri-Regular.woff') format('woff'), url('../fonts/Calibri-Regular.ttf') format('truetype'), url('../fonts/Calibri-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Kartika-Bold';
+	src: url('../fonts/Kartika-Bold.eot');
+	src: local('☺'), url('../fonts/Kartika-Bold.woff') format('woff'), url('../fonts/Kartika-Bold.ttf') format('truetype'), url('../fonts/Kartika-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'News Gothic Condensed BT';
+	src: url('../fonts/News Gothic Condensed BT.eot');
+	src: local('☺'), url('../fonts/News Gothic Condensed BT.woff') format('woff'), url('../fonts/News Gothic Condensed BT.ttf') format('truetype'), url('../fonts/News Gothic Condensed BT.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Segoe-Bold';
+	src: url('../fonts/Segoe-Bold.eot');
+	src: local('☺'), url('../fonts/Segoe-Bold.woff') format('woff'), url('../fonts/Segoe-Bold.ttf') format('truetype'), url('../fonts/Segoe-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Sitka-Italic';
+	src: url('../fonts/Sitka-Italic.eot');
+	src: local('☺'), url('../fonts/Sitka-Italic.woff') format('woff'), url('../fonts/Sitka-Italic.ttf') format('truetype'), url('../fonts/Sitka-Italic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+//</Подключаем шрифты>=======================================================================================
+
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily:"";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth:320px;
+$mw:1170;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+*{padding: 0px;margin: 0px;border: 0px;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+aside,nav,footer,header,section{display: block;}
+html,body{height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
+	&.lock{overflow: hidden;
+		@media (max-width:$md3+px){
+			width: 100%;
+			position: fixed;
+			overflow: hidden;
+		}
+	}
+}
+input,button,textarea{font-family: $fontfamily;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper{width: 100%;min-height: 100%;overflow: hidden;
+	&.loaded{}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container{max-width:$mw+px;margin: 0 auto;width: 100%;
+	@media (max-width:$md1+px){max-width: 970px;}
+	@media (max-width:$md2+px){max-width: 750px;}
+	@media (max-width:$md3+px){max-width: none;padding:0 10px;}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "fontawesome.scss";
+@import "header.scss";
+@import "burger.scss";
+@import "footer.scss";
+@import "ui.scss";
+@import "slick.scss";
+@import "slick-theme.scss";
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
+
+/*********************************WHAT*******************************/
+
+
+
+
+.what {
+	padding: 112px 0px 93px 0px;
+	img {
+		height: 100%;
+		width: 100%;
+	}
+	background-image: url(../img/what/what-bg.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	@media (max-width: 768px) {
+		background-image:none;
+	}
+	
+}
+	
+
+.what__wrap {
+	position: relative;
+	width: 30%;
+	@media (max-width: 992px) {
+		width: 50%;
+	}
+	@media (max-width: 768px) {
+		margin: 0 auto;
+		width: 80%;
+	}
+	
+}
+.what__title-shadow {
+	position: absolute;
+	top: -70px;
+	left: -30%;
+	opacity: 0.06;
+	color: #131313;
+	font-family: "Segoe-Bold";
+	font-size: 66px;
+	min-width: 470px;
+	
+	
+}
+.what__title {
+
+	color: #969696;
+	font-size: 37px;
+	color: #000000;
+	font-family: Roboto;
+	font-weight: 700;
+	padding-bottom: 71px;
+	span {
+		font-family: "Raleway";
+		font-weight: 300;
+}
+
+
+}
+.what__subtitle {
+	font-family: 'Calibri-Regular';
+	color: #000000;
+	font-size: 18px;
+	line-height: 1.2em;
+	padding-bottom: 20px;
+}
+.what__text {
+	font-family: 'Calibri-Regular';
+	color: #000000;
+	line-height: 1.2em;
+	font-size: 16px;
+	margin-bottom: 95px;
+}
+.what__btn {
+	color: #060606;
+	font-family: "Raleway";
+	font-size: 17px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 12px 38px;
+	border: 1px solid #33c5f6;
+	border-radius: 30px;
+	transition: all 0.5s ease;
+	
+	@media (max-width: 768px) {
+		margin: 0 auto;
+	}
+
+	 &:hover {
+	 	background-color: #33c5f6;
+	 	transition: all 0.5s ease;
+	 }
+}
+
+/*********************************END WHAT***************************/
+
+/******************************ICON***************************/
+.icon {
+	padding: 64px 0px 64px 0px;
+	background-color: #45b681;
+	color: #fff;
+}
+.icon__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap:wrap;
+	margin: 0 -15px;
+}
+.icon__column {
+
+	flex: 0 1 25%;
+	border: 2px dashed transparent;
+	border-radius: 50px;
+	transition: all 0.5s ease;
+	padding:0 15px;
+	&:hover {
+			border-color: #fff;
+			transition: all 0.5s ease;
+
+		}
+
+		@media(max-width:798px){
+			flex: 0 1 50%;
+
+		}
+		@media(max-width:468px){
+			flex: 0 1 100%;
+
+		}
+
+}
+	
+	
+	
+.icon__item {
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content: center;
+	padding: 64px 15px;
+	
+		
+
+}
+.icon__item-img {
+	min-height: 120px;
+}
+.icon__item-text {
+		padding-top: 35px;
+		color: #ffffff;
+		font-family: 'Calibri-Regular';
+		font-size: 14px;
+		font-weight: 400;
+		text-align:center;
+		line-height: 1.2em;
+}
+
+/****************************** END ICON *********************/
+
+
+/***************************** JOIN US**********************/
+.joinus {
+
+}
+.joinus__white {
+	background-color: #fff;
+	min-height: 168px;
+}
+.joinus__grey {
+	background-color: #f3f3f3;
+	min-height: 335px;
+}
+.joinus__blue {
+	position: relative;
+	background: radial-gradient(circle, rgba(95,133,179,1) 0%, rgba(124,164,217,1) 0%, rgba(94,133,179,1) 100%);
+	min-height: 395px;
+	padding: 172px 0px 90px 0px;
+
+	.joinus__blue-img {
+		position: absolute;
+		margin: 0;
+	    position: absolute;
+	    top: -75px;
+	    left: 50%;
+	    margin-right: -50%;
+	    transform: translate(-50%, -50%)
+
+	}
+}
+.joinus__blue-title {
+		color: #ffffff;
+		font-family: Raleway;
+		font-size: 30px;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 80px;
+		letter-spacing:0.3em;
+}
+.joinus__blue__column-wrap {
+	display: flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	margin: 0 -72px;
+
+	@media(max-width:998px) {
+		margin: 0 -36px;
+	}
+	@media(max-width:568px) {
+		
+	}
+
+}
+.joinus__blue__column {
+	flex: 0 1 33.333%;
+	padding: 0 72px;
+	text-align: center;
+
+	@media(max-width:998px) {
+		padding: 0 36px;
+	}
+	@media(max-width:568px) {
+		flex: 0 1 100%;
+	}
+
+	
+}
+.joinus__blue__item {
+	@media(max-width:568px) {
+		padding-bottom: 50px;
+	}
+}
+.joinus__blue__item-title {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: "Raleway";
+	padding-bottom: 10px;
+
+}
+.joinus__blue__item-subtitle {
+
+	color: #ffffff;
+	font-size: 16px;
+	font-family: "Raleway";
+	font-weight: 500;
+}
+/***************************** END JOIN US *****************/
+
+/*===========================TESTIMONIALS===================*/
+.testimonial {
+	padding:77px 0px 66px 0px;
+}
+.testimonial-title {
+	position: relative;
+	color: #2a2a2a;
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 30px;
+	text-align:center;
+	padding-bottom: 55px;
+		& span {
+				color: #8c8c8c;
+				font-family: Raleway;
+				font-size: 30px;
+				font-weight: 300;
+		}
+
+}
+.testimonial-shadow {
+	position: absolute;
+	top: -45px;left: 17%;
+	opacity: 0.1;
+	color: #2a2a2a;
+	font-family: Roboto;
+	font-size: 68px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.testimonial__slider {
+	position: relative;
+}
+.slider__item {}
+.slider-text {
+	position: relative;
+	margin:0 auto;
+	max-width: 534px;
+	height:100%;
+	background-color: #f6f6f6;
+	padding:50px 36px;
+	margin-bottom: 62px;
+		&:before {
+			content:'‘‘';
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			color: #2a2a2a;
+			font-family: 'Sitka-Italic';
+			font-size: 30px;
+
+			}
+			&:after {
+			content:'’’';
+			position: absolute;
+			bottom:-10px;
+			right: 10px;
+			color: #2a2a2a;
+			font-family: 'Sitka-Italic';
+			font-size: 30px;
+
+			}
+	& p {
+		color: #2a2a2a;
+		font-size: 18px;
+		font-family: 'Sitka-Italic';
+
+			
+	}
+	
+			
+}
+.slider__comment-author {
+	display:flex;
+	justify-content:center;
+	align-items: center;
+
+}
+.slider__comment-author-img {
+	
+	padding-right:50px;
+	
+
+}
+.slider__comment-author-name {
+	color: #2a2a2a;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 300;
+
+	position:relative;
+	&:before {
+		content:'';
+		position: absolute;
+		width: 18px;
+		height: 2px;
+		background-image: url(../img/testimonial/line.png);
+		top: 8px;
+		left: -30px;
+		
+
+	}
+}
+.slider__arrow-left {
+	height: 26px;
+	width: 16px;
+	cursor: pointer;
+	position: absolute;
+	top: 30%;
+        left: 0;
+        margin-right: -50%;
+        transform: translate(-50%, -50%); 
+        z-index: 999;
+}
+.slider__arrow-right {
+	height: 26px;
+	width: 16px;
+	cursor: pointer;
+	position: absolute;
+	top: 30%;
+        right: 0;
+        margin-left: -50%;
+        transform: translate(-50%, -50%); 
+}
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  transform: scale(1.5);
+}
+
+/*=========================== END TESTIMONIALS===================*/
+
+//====================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================

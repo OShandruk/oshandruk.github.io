@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('SegoeUI-Bold.eot');
+    src: url('SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SegoeUI-Bold.woff2') format('woff2'),
+        url('SegoeUI-Bold.woff') format('woff'),
+        url('SegoeUI-Bold.ttf') format('truetype'),
+        url('SegoeUI-Bold.svg#SegoeUI-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewsGoth Cn BT';
+    src: url('NewsGothicBT-RomanCondensed.eot');
+    src: url('NewsGothicBT-RomanCondensed.eot?#iefix') format('embedded-opentype'),
+        url('NewsGothicBT-RomanCondensed.woff2') format('woff2'),
+        url('NewsGothicBT-RomanCondensed.woff') format('woff'),
+        url('NewsGothicBT-RomanCondensed.ttf') format('truetype'),
+        url('NewsGothicBT-RomanCondensed.svg#NewsGothicBT-RomanCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('SegoeUI.eot');
+    src: url('SegoeUI.eot?#iefix') format('embedded-opentype'),
+        url('SegoeUI.woff2') format('woff2'),
+        url('SegoeUI.woff') format('woff'),
+        url('SegoeUI.ttf') format('truetype'),
+        url('SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri.eot');
+    src: url('Calibri.eot?#iefix') format('embedded-opentype'),
+        url('Calibri.woff2') format('woff2'),
+        url('Calibri.woff') format('woff'),
+        url('Calibri.ttf') format('truetype'),
+        url('Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kartika';
+    src: url('Kartika-Bold.eot');
+    src: url('Kartika-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Kartika-Bold.woff2') format('woff2'),
+        url('Kartika-Bold.woff') format('woff'),
+        url('Kartika-Bold.ttf') format('truetype'),
+        url('Kartika-Bold.svg#Kartika-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('Calibri-Bold.eot');
+    src: url('Calibri-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Calibri-Bold.woff2') format('woff2'),
+        url('Calibri-Bold.woff') format('woff'),
+        url('Calibri-Bold.ttf') format('truetype'),
+        url('Calibri-Bold.svg#Calibri-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
