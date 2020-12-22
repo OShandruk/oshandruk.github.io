@@ -6683,6 +6683,19 @@ Build date: 2019-12-19 16:51:02
   padding-bottom: 50px;
 }
 
+.page__list li {
+  margin-bottom: 20px;
+}
+
+.page__list .page__link {
+  color: #000;
+  font-size: 25px;
+}
+
+.page__list .page__link:hover {
+  text-decoration: underline;
+}
+
 .page__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
