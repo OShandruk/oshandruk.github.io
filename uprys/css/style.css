@@ -2511,6 +2511,9 @@ button.swiper-pagination-bullet {
   font-size: 35px;
   margin-bottom: 15px;
   color: #161616;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .teams__item-subtitle {
@@ -2520,6 +2523,10 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #73ACDC;
+}
+
+.teams__hidden-title {
+  display: none;
 }
 
 /*TEAM-POST
